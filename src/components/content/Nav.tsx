@@ -1,8 +1,8 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { StyleContext } from '../../context/Style'
 import Logo from '../elements/Logo'
-import Icon_Menu from '../icons/Icon_Menu'
 import CartButton from '../elements/CartButton'
 import Avatar from '../elements/Avatar'
 import MenuButton from '../elements/MenuButton'
@@ -34,11 +34,11 @@ const NavContainer = styled.nav`
 					left: 0;
 					bottom: -46px;
 					height: 4px;
-					background-color: hsl(26, 100%, 55%);
+					background-color: ${props => props.theme.orange};
 				}
 			}
 
-			@media (min-width: 800px) {
+			@media (min-width: ${props => props.theme.breakpoint}) {
 				display: block;
 			}
 		}
@@ -49,19 +49,21 @@ const NavContainer = styled.nav`
 		align-items: center;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: ${props => props.theme.breakpoint}) {
 		height: 112px;
 		border-bottom: 1px solid #E4E9F2;
 	}
 
-	@media (min-width: 1110px) {
+	@media (min-width: ${props => props.theme.maxPageWidth}) {
 		padding: 0;
 	}
 `
 
 export default function Nav() {
+	const { styles } = useContext(StyleContext)
+
 	return (
-		<NavContainer>
+		<NavContainer theme={styles}>
 			<div className="leftBlock">
 				<MenuButton />
 				<Logo />

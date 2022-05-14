@@ -1,6 +1,5 @@
 
 @use './vendor';
-@use './abstracts' as *;
 
 *,
 *::before,
@@ -15,29 +14,5 @@ body {
 }
 
 body {
-	background-color: $white;
-	font-family: 'Kumbh Sans', sans-serif;
-	color: $dark-greyish-blue;
-	text-align: center;
-}
-
-h1,
-h2 {
-	color: $very-dark-blue;
-}
-
-a {
-	text-decoration: none;
-	color: $dark-greyish-blue;
-	outline: none;
-
-	&:hover,
-	&:focus {
-		color: $very-dark-blue;
-	}
-}
-
-.container {
-	max-width: 1110px;
-	margin: 0 auto;
+	background-color: #ffffff;
 }

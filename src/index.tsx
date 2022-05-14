@@ -1,7 +1,14 @@
 
 import './scss/index.scss'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import React from 'react'
 import App from './App'
+import Style from './context/Style'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const container = document.getElementById('app')
+const root = createRoot(container!)
+root.render(
+	<Style>
+		<App />
+	</Style>
+)

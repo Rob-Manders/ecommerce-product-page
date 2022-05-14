@@ -1,15 +1,16 @@
 
 import React from 'react'
 import Nav from './components/content/Nav'
+import PageContainer from './components/layout/PageContainer'
 
 export default function App() {
 	return (
-		<div className="container">
+		<PageContainer>
 			<Nav />
 			<main>
 				
 			</main>
 
-		</div>
+		</PageContainer>
 	)
 }
