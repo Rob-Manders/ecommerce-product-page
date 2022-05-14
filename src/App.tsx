@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Nav from './components/content/Nav'
+import ProductImage from './components/content/ProductImage'
 import PageContainer from './components/layout/PageContainer'
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
 		<PageContainer>
 			<Nav />
 			<main>
-				
+				<ProductImage />
 			</main>
 
 		</PageContainer>
