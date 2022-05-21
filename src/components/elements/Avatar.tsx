@@ -1,6 +1,7 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { StyleContext } from '../../context/Style'
 
 const AvatarContainer = styled.button`
 	--dimensions: 1.5rem;
@@ -27,14 +28,16 @@ const AvatarContainer = styled.button`
 		border: 2px solid hsl(26, 100%, 55%);
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: ${props => props.theme.breakpointTablet}) {
 		--dimensions: 3rem;
 	}
 `
 
 export default function Avatar() {
+	const { styles } = useContext(StyleContext)
+
 	return (
-		<AvatarContainer>
+		<AvatarContainer theme={styles}>
 			<img src="./images/avatar.png" alt="image of user" width="50" height="50" />
 		</AvatarContainer>
 	)

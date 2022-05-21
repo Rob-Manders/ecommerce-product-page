@@ -12,6 +12,7 @@ const QtySelectorContainer = styled.div`
 	background-color: ${props => props.theme.lightGreyishBlue};
 	width: 100%;
 	border-radius: 10px;
+	min-height: 52px;
 
 	.button {
 		all: unset;
@@ -26,12 +27,11 @@ const QtySelectorContainer = styled.div`
 
 		&:hover,
 		&:focus {
-			opacity: 0.5;
+			opacity: 0.75;
 		}
 	}
 
 	.qtyInput {
-		font-size: 1.05rem;
 		font-weight: 700;
 		text-align: center;
 		color: ${props => props.theme.veryDarkBlue};
@@ -39,6 +39,7 @@ const QtySelectorContainer = styled.div`
 		border: none;
 		margin: 0.9rem;
 		outline: none;
+		width: 50%;
 	}
 `
 

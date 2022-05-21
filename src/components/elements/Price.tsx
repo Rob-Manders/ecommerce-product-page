@@ -25,7 +25,6 @@ const PriceContainer = styled.div`
 		}
 
 		.discountPercentage {
-			font-size: 1.05rem;
 			font-weight: 700;
 			color: ${props => props.theme.orange};
 			background-color: ${props => props.theme.paleOrange};
@@ -37,10 +36,16 @@ const PriceContainer = styled.div`
 	}
 
 	.normalPrice {
-		font-size: 1.05rem;
 		font-weight: 700;
 		text-decoration: line-through;
-		color: ${props => props.theme.greyishBlue}
+		color: ${props => props.theme.greyishBlue};
+		margin: 0;
+	}
+
+	@media (min-width: ${props => props.theme.breakpointDesktop}) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 1.5rem 0;
 	}
 `
 

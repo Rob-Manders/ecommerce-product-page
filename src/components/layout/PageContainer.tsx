@@ -20,7 +20,6 @@ const Container = styled.div`
 
 	p {
 		line-height: 1.6;
-		font-size: 15px;
 	}
 
 	a {

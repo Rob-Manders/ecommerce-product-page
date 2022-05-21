@@ -6,7 +6,8 @@ export const StyleContext = createContext(null)
 export default function Style({ children }: { children: ReactNode }) {
 	const [ styles, setStyles ] = useState({
 		maxPageWidth: '1110px',
-		breakpoint: '800px',
+		breakpointDesktop: '1100px',
+		breakpointTablet: '500px',
 		orange: 'hsl(26, 100%, 55%)',
 		paleOrange: 'hsl(25, 100%, 94%)',
 		veryDarkBlue: 'hsl(220, 13%, 13%)',

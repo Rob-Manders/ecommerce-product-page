@@ -1,6 +1,7 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { StyleContext } from '../../context/Style'
 import Icon_Menu from '../icons/Icon_Menu'
 
 const MenuButtonContainer = styled.button`
@@ -22,14 +23,16 @@ const MenuButtonContainer = styled.button`
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: ${props => props.theme.breakpointDesktop}) {
 		display: none;
 	}
 `
 
 export default function MenuButton() {
+	const { styles } = useContext(StyleContext)
+
 	return (
-		<MenuButtonContainer onClick={() => console.log('Open menu...')}>
+		<MenuButtonContainer theme={styles} onClick={() => console.log('Open menu...')}>
 			<Icon_Menu />
 		</MenuButtonContainer>
 	)

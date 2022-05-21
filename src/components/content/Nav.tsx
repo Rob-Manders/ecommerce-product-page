@@ -38,7 +38,7 @@ const NavContainer = styled.nav`
 				}
 			}
 
-			@media (min-width: ${props => props.theme.breakpoint}) {
+			@media (min-width: ${props => props.theme.breakpointDesktop}) {
 				display: block;
 			}
 		}
@@ -49,7 +49,7 @@ const NavContainer = styled.nav`
 		align-items: center;
 	}
 
-	@media (min-width: ${props => props.theme.breakpoint}) {
+	@media (min-width: ${props => props.theme.breakpointTablet}) {
 		height: 112px;
 		border-bottom: 1px solid #E4E9F2;
 	}

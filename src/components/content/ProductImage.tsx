@@ -18,7 +18,7 @@ const ProductImageContainer = styled.section`
 		height: 100%;
 		object-fit: cover;
 
-		@media (min-width: ${props => props.theme.breakpoint}) {
+		@media (min-width: ${props => props.theme.breakpointTablet}) {
 			width: 445px;
 			height: 445px;
 			border-radius: 15px;
@@ -33,7 +33,7 @@ const ProductImageContainer = styled.section`
 		justify-content: space-between;
 		padding: 1rem;
 
-		@media (min-width: ${props => props.theme.breakpoint}) {
+		@media (min-width: ${props => props.theme.breakpointTablet}) {
 			display: none;
 		}
 	}
@@ -41,7 +41,7 @@ const ProductImageContainer = styled.section`
 	.thumbnails {
 		display: none;
 
-		@media (min-width: ${props => props.theme.breakpoint}) {
+		@media (min-width: ${props => props.theme.breakpointTablet}) {
 			display: flex;
 			justify-content: space-between;
 			width: 445px;
@@ -49,12 +49,16 @@ const ProductImageContainer = styled.section`
 		}
 	}
 
-	@media (min-width: ${props => props.theme.breakpoint}) {
+	@media (min-width: ${props => props.theme.breakpointTablet}) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 100px;
 		height: 100%;
+		margin-top: 2rem;
+	}
+
+	@media (min-width: ${props => props.theme.breakpointDesktop}) {
+		width: 50%;
 	}
 `
 

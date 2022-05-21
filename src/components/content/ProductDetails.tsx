@@ -2,6 +2,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { StyleContext } from '../../context/Style'
+import AddToCartButton from '../elements/AddToCartButton'
 import Price from '../elements/Price'
 import QtySelector from '../elements/QtySelector'
 
@@ -21,8 +22,20 @@ const ProductDetailsContainer = styled.section`
 		margin: 1rem 0 1.5rem;
 	}
 
-	.productDescription {
+	@media (min-width: ${props => props.theme.breakpointTablet}) {
+		padding: 50px 75px;
+		width: 445px;
+		padding: 0;
+		margin: 2rem auto 3rem;
 
+		.interactiveElements {
+			display: flex;
+		}
+	}
+
+	@media (min-width: ${props => props.theme.breakpointDesktop}) {
+		width: 50%;
+		padding: 50px;
 	}
 `
 
@@ -37,7 +50,10 @@ export default function ProductDetails() {
 				These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
 			</p>
 			<Price price={250} discountPercentage={50} />
-			<QtySelector />
+			<div className="interactiveElements">
+				<QtySelector />
+				<AddToCartButton />
+			</div>
 		</ProductDetailsContainer>
 	)
 }
