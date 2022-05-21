@@ -30,11 +30,15 @@ const QtySelectorContainer = styled.div`
 		}
 	}
 
-	.qty {
+	.qtyInput {
 		font-size: 1.05rem;
 		font-weight: 700;
+		text-align: center;
 		color: ${props => props.theme.veryDarkBlue};
+		background-color: transparent;
+		border: none;
 		margin: 0.9rem;
+		outline: none;
 	}
 `
 
@@ -61,13 +65,12 @@ export default function QtySelector() {
 
 	useEffect(() => {
 		setInputValue(qty)
-		console.log(qty)
 	}, [qty])
 
 	return (
 		<QtySelectorContainer theme={styles}>
 			<button className="button" onClick={subtractOne}><Icon_Minus /></button>
-			<input type="text" className="qty" onChange={(event) => changeQty(event)} value={inputValue} />
+			<input type="text" className="qtyInput" onChange={(event) => changeQty(event)} value={inputValue} />
 			<button className="button" onClick={addOne}><Icon_Plus /></button>
 		</QtySelectorContainer>
 	)
