@@ -14,6 +14,15 @@ const Container = styled.div`
 		color: ${props => props.theme.veryDarkBlue};
 	}
 
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		line-height: 1.6;
+		font-size: 15px;
+	}
+
 	a {
 		text-decoration: none;
 		color: ${props => props.theme.darkGreyishBlue};

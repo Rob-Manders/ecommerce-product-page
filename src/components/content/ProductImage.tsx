@@ -70,10 +70,10 @@ export default function ProductImage() {
 				<NextButton action={() => console.log('Next image...')} />
 			</div>
 			<div className="thumbnails">
-				<Thumbnail imageUrl="./images/product-1-thumbnail.jpg" altText="thumbnail 1" selected />
-				<Thumbnail imageUrl="./images/product-2-thumbnail.jpg" altText="thumbnail 2" />
-				<Thumbnail imageUrl="./images/product-3-thumbnail.jpg" altText="thumbnail 3" />
-				<Thumbnail imageUrl="./images/product-4-thumbnail.jpg" altText="thumbnail 4" />
+				<Thumbnail imageUrl="./images/product-1-thumbnail.jpg" altText="thumbnail 1" action={() => setCurrentImage('./images/product-1.jpg')} selected />
+				<Thumbnail imageUrl="./images/product-2-thumbnail.jpg" altText="thumbnail 2" action={() => setCurrentImage('./images/product-2.jpg')} />
+				<Thumbnail imageUrl="./images/product-3-thumbnail.jpg" altText="thumbnail 3" action={() => setCurrentImage('./images/product-3.jpg')} />
+				<Thumbnail imageUrl="./images/product-4-thumbnail.jpg" altText="thumbnail 4" action={() => setCurrentImage('./images/product-4.jpg')} />
 			</div>
 		</ProductImageContainer>
 	)
