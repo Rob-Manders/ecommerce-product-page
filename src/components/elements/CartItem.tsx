@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { StyleContext } from '../../context/Style'
-import Icon_Delete from '../icons/Icon_Delete'
+import DeleteButton from './DeleteButton'
 
 const CartItemContainer = styled.div`
 	display: flex;
@@ -20,22 +20,6 @@ const CartItemContainer = styled.div`
 			margin: 0;
 		}
 	}
-
-	.deleteItemButton {
-		all: unset;
-		cursor: pointer;
-
-		.deleteIcon {
-			fill: ${props => props.theme.greyishBlue};
-		}
-
-		&:hover,
-		&:focus {
-			.deleteIcon {
-				fill: ${props => props.theme.darkGreyishBlue};
-			}
-		}
-	}
 `
 
 export default function CartItem() {
@@ -48,9 +32,7 @@ export default function CartItem() {
 				<p className="itemTitle">Fall Limited Edition Sneakers</p>
 				<p className="itemCost">$125.00 x 3 <strong>$375.00</strong></p>
 			</div>
-			<button className="deleteItemButton">
-				<Icon_Delete />
-			</button>
+			<DeleteButton action={() => console.log('Delete item.')} />
 		</CartItemContainer>
 	)
 }
