@@ -15,7 +15,9 @@ export default function Style({ children }: { children: ReactNode }) {
 		greyishBlue: 'hsl(220, 14%, 75%)',
 		lightGreyishBlue: 'hsl(223, 64%, 98%)',
 		white: 'hsl(0, 0%, 100%)',
-		black: 'hsl(0, 0%, 0%)'
+		black: 'hsl(0, 0%, 0%)',
+		darkShadow: 'hsla(220, 13%, 13%, 0.5)',
+		horizontalLine: 'hsl(218, 34%, 92%)'
 	})
 
 	return (

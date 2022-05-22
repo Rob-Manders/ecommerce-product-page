@@ -5,6 +5,7 @@ import Main from './components/layout/Main'
 import ProductDetails from './components/content/ProductDetails'
 import ProductImage from './components/content/ProductImage'
 import PageContainer from './components/layout/PageContainer'
+import Cart from './components/content/Cart'
 
 export default function App() {
 	return (
@@ -14,7 +15,7 @@ export default function App() {
 				<ProductImage />
 				<ProductDetails />
 			</Main>
-
+			<Cart />
 		</PageContainer>
 	)
 }

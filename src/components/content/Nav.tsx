@@ -6,6 +6,7 @@ import Logo from '../elements/Logo'
 import CartButton from '../elements/CartButton'
 import Avatar from '../elements/Avatar'
 import MenuButton from '../elements/MenuButton'
+import Cart from './Cart'
 
 const NavContainer = styled.nav`
 	display: flex;
@@ -81,6 +82,8 @@ export default function Nav() {
 				<CartButton />
 				<Avatar />
 			</div>
+
+			<Cart />
 		</NavContainer>
 	)
 }
