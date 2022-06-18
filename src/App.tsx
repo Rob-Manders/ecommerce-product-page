@@ -15,7 +15,6 @@ export default function App() {
 				<ProductImage />
 				<ProductDetails />
 			</Main>
-			<Cart />
 		</PageContainer>
 	)
 }

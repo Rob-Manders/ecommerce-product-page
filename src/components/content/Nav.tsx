@@ -9,6 +9,7 @@ import MenuButton from '../elements/MenuButton'
 import Cart from './Cart'
 
 const NavContainer = styled.nav`
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

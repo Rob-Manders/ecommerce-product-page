@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { StyleContext } from '../../context/Style'
 import CartItem from '../elements/CartItem'
+import CheckoutButton from '../elements/CheckoutButton'
 
 const CartContainer = styled.aside`
 	position: absolute;
@@ -15,7 +16,8 @@ const CartContainer = styled.aside`
 	width: 360px;
 	min-height: 256px;
 	border-radius: 10px;
-	box-shadow: 0 20px 50px -20 ${props => props.theme.darkShadow};
+	box-shadow: 0 20px 50px -20px ${props => props.theme.darkShadow};
+	z-index: 10;
 
 	.cartHeader {
 		font-size: 1rem;
@@ -39,6 +41,11 @@ const CartContainer = styled.aside`
 	.fullCart {
 		padding: 1.4rem;
 	}
+
+	@media (min-width: ${props => props.theme.breakpointTablet}) {
+		margin-left: auto;
+		margin-top: 50px;
+	}
 `
 
 export default function Cart() {
@@ -52,6 +59,7 @@ export default function Cart() {
 			</div> */}
 			<div className="fullCart">
 				<CartItem />
+				<CheckoutButton />
 			</div>
 		</CartContainer>
 	)

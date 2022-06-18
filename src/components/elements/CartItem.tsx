@@ -7,6 +7,7 @@ import DeleteButton from './DeleteButton'
 const CartItemContainer = styled.div`
 	display: flex;
 	width: 100;
+	margin-bottom: 1.5rem;
 
 	.itemImage {
 		border-radius: 4px;
